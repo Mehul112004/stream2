@@ -17,9 +17,9 @@ foreign_currency2 = st.selectbox("Select the second foreign currency:", currency
 # User input for amount to convert
 amount_to_convert = st.number_input("Enter the amount to convert:", min_value=0.01)
 
-# User input for threshold for foreign currencies
-threshold_currency1 = st.number_input(f"Set threshold for {foreign_currency1}:", min_value=0.01)
-threshold_currency2 = st.number_input(f"Set threshold for {foreign_currency2}:", min_value=0.01)
+# User input for threshold for foreign currencies with unique widget IDs
+threshold_currency1 = st.number_input(f"Set threshold for {foreign_currency1}:", min_value=0.01, key="threshold1")
+threshold_currency2 = st.number_input(f"Set threshold for {foreign_currency2}:", min_value=0.01, key="threshold2")
 
 # Function to perform currency conversion
 def convert_currency(amount, from_currency, to_currency):
