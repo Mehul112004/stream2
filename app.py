@@ -20,8 +20,8 @@ amount_to_convert = st.number_input("Enter the amount to convert:", min_value=0.
 # Create a Streamlit form
 with st.form("conversion_form"):
     # User input for threshold for foreign currencies
-    threshold_currency1 = st.number_input(f"Set threshold for {foreign_currency1}:", min_value=0.01)
-    threshold_currency2 = st.number_input(f"Set threshold for {foreign_currency2}:", min_value=0.01)
+    threshold_currency1 = st.number_input(f"Set threshold for {foreign_currency1}:", min_value=0.01, key="threshold1")
+threshold_currency2 = st.number_input(f"Set threshold for {foreign_currency2}:", min_value=0.01, key="threshold2")
     submit_button = st.form_submit_button(label="Convert")
 
 # Function to perform currency conversion
